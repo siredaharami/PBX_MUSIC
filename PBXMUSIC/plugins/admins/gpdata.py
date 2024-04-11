@@ -5,7 +5,7 @@ from PBXMUSIC import app
 from config import OWNER_ID
 from PBXMUSIC.misc import SUDOERS
 from pyrogram.types import Message
-from PBXMUSIC.utils.PBX_ban import admin_filter
+from PBXMUSIC.utils.bad_ban import admin_filter
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from PBXMUSIC.utils.database import add_served_chat, delete_served_chat
 
