@@ -2,7 +2,7 @@ from PBXMUSIC import app
 from config import OWNER_ID
 from pyrogram import filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from PBXMUSIC.utils.PBX_ban import admin_filter
+from PBXMUSIC.utils.bad_ban import admin_filter
 from PBXMUSIC.misc import SUDOERS
 
 BOT_ID = app.me.id  # Corrected this line
