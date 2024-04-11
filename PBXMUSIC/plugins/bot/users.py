@@ -1,4 +1,4 @@
-from PBXMUSIC.utils.PBX_ban import admin_filter
+from PBXMUSIC.utils.bad_ban import admin_filter
 import os
 import csv
 from pyrogram import Client, filters
