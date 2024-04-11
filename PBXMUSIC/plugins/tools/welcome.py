@@ -96,13 +96,13 @@ def circle(pfp, size=(500, 500)):
     return pfp
 
 def welcomepic(pic, user, chatname, id, uname):
-    background = Image.open("VIPMUSIC/assets/wel2.png")
+    background = Image.open("PBXMUSIC/assets/wel2.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize((1157, 1158))
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('VIPMUSIC/assets/font.ttf', size=60)
-    welcome_font = ImageFont.truetype('VIPMUSIC/assets/font.ttf', size=60)
+    font = ImageFont.truetype('PBXMUSIC/assets/font.ttf', size=60)
+    welcome_font = ImageFont.truetype('PBXMUSIC/assets/font.ttf', size=60)
     draw.text((1800, 700), f'NAME: {user}', fill=(255, 255, 255), font=font)
     draw.text((1800, 830), f'ID: {id}', fill=(255, 255, 255), font=font)
     draw.text((1800, 965), f"USERNAME : {uname}", fill=(255, 255, 255), font=font)
