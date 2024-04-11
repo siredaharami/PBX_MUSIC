@@ -1,4 +1,4 @@
-from PBXMUSIC.core.bot import VIP
+from PBXMUSIC.core.bot import PBX
 from PBXMUSIC.core.dir import dirr
 from PBXMUSIC.core.git import git
 from PBXMUSIC.core.userbot import Userbot
