@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from PBXMUSIC import LOGGER, app, userbot
-from PBXMUSIC.core.call import VIP
+from PBXMUSIC.core.call import PBX
 from PBXMUSIC.misc import sudo
 from PBXMUSIC.plugins import ALL_MODULES
 from PBXMUSIC.utils.database import get_banned_users, get_gbanned
@@ -39,8 +39,8 @@ async def init():
         importlib.import_module("PBXMUSIC.plugins" + all_module)
     LOGGER("PBXMUSIC.plugins").info(" ꜱᴏ ꜱᴀᴅ 🥳...")
     await userbot.start()
-    await VIP.start()
-    await VIP.decorators()
+    await PBX.start()
+    await PBX.decorators()
     LOGGER("PBXMUSIC").info("╔═════ஜ۩۞۩ஜ════╗\n  ♨️ᴍᴀᴅᴇ ʙʏ ᴛᴇᴀᴍ ᴘʙx ♨️\n╚═════ஜ۩۞۩ஜ════╝"
     )
     await idle()
