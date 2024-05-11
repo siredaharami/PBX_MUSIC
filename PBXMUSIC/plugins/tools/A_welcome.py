@@ -165,6 +165,7 @@ async def greet_new_members(_, member: ChatMemberUpdated):
         chat_id = member.chat.id
         userbot = await get_assistant(chat_id)
         count = await app.get_chat_members_count(chat_id)
+        caption=TEXT.format(title=chat.title),
         A = await wlcm.find_one(chat_id)
         if A:
             return
@@ -175,7 +176,8 @@ async def greet_new_members(_, member: ChatMemberUpdated):
         if member.new_chat_member and not member.old_chat_member:
             welcome_text = f"""**▬▬▬▬▬▬▬▬▬▬▬▬▬
   ✦••✤┈┈𝐖𝐞𝐥𝐜𝐨𝐦𝐞 ✤┈┈••✦
-  
+
+  ➻** {title}
  ▬▬▬▬▬▬▬▬▬▬▬▬▬
 ┏━━━━━━━• ◆ • ━━━━━━━
 ┠ 𝐅𝐈𝐑𝐒𝐓 𝐍𝐀𝐌𝐄 : {user.mention}
