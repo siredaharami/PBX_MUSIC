@@ -176,7 +176,8 @@ async def greet_new_members(_, member: ChatMemberUpdated):
         if member.new_chat_member and not member.old_chat_member:
             welcome_text = f"""**▬▬▬▬▬▬▬▬▬▬▬▬▬
   ✦••✤┈┈𝐖𝐞𝐥𝐜𝐨𝐦𝐞 ✤┈┈••✦
-  
+
+  ➻** {title}
  ▬▬▬▬▬▬▬▬▬▬▬▬▬
 ┏━━━━━━━• ◆ • ━━━━━━━
 ┠ 𝐅𝐈𝐑𝐒𝐓 𝐍𝐀𝐌𝐄 : {user.mention}
