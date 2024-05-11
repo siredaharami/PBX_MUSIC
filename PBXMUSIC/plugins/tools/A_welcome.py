@@ -165,7 +165,6 @@ async def greet_new_members(_, member: ChatMemberUpdated):
         chat_id = member.chat.id
         userbot = await get_assistant(chat_id)
         count = await app.get_chat_members_count(chat_id)
-        caption=TEXT.format(title=chat.title),
         A = await wlcm.find_one(chat_id)
         if A:
             return
