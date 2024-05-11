@@ -133,6 +133,7 @@ async def auto_state(_, message):
         return await message.reply_text(usage)
     chat_id = message.chat.id
     user = await app.get_chat_member(message.chat.id, message.from_user.id)
+    caption=TEXT.format(mention=user.mention, title=chat.title)
     if user.status in (
         enums.ChatMemberStatus.ADMINISTRATOR,
         enums.ChatMemberStatus.OWNER,
