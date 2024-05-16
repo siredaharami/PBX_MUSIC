@@ -66,12 +66,12 @@ async def ctest(_, message):
          try:
             p2 = await app.download_media(photo2.big_file_id, file_name="pfp1.png")
          except Exception:
-            p2 = "VIPMUSIC/assets/upic.png"
+            p2 = "PBXMUSIC/assets/upic.png"
             
          img1 = Image.open(f"{p1}")
          img2 = Image.open(f"{p2}")
 
-         img = Image.open("VIPMUSIC/assets/cppic.png")
+         img = Image.open("PBXMUSIC/assets/cppic.png")
 
          img1 = img1.resize((437,437))
          img2 = img2.resize((437,437))
