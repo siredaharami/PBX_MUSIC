@@ -33,4 +33,4 @@ async def save_couple(cid: int, date: str, couple: dict, img: str):
         {"chat_id": cid},
         {"$set": {"couple": lovers, "img": img}},
         upsert=True,
-                              )
+    )
