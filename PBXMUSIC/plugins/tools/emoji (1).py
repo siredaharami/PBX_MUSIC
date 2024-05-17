@@ -1,7 +1,7 @@
 import os
 import random
 import time
-from ... import *
+from PBXMUSIC import app
 from pyrogram import Client
 from pyrogram.types import Message
 from PBXMUSIC.utils.baad import edit_or_reply, get_text
