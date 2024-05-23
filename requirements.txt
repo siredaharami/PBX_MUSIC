@@ -3,7 +3,7 @@ bard
 python-telegram-bot==21.1.1
 python-whois
 pornhub-api==0.2.0
-aiohttp==3.9.1
+aiohttp==3.9.3
 asyncio==3.4.3
 beautifulsoup4
 blackpink
