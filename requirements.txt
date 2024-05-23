@@ -40,7 +40,7 @@ emojis
 speedtest-cli
 spotipy
 tgcrypto
-telethon==1.33.1
+telethon==1.35.0
 telegraph==2.2.0
 unidecode
 yt-dlp
