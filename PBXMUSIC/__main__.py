@@ -11,7 +11,9 @@ from PBXMUSIC.misc import sudo
 from PBXMUSIC.plugins import ALL_MODULES
 from PBXMUSIC.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
-from PBXMUSIC import telethn
+
+from PBXMUSIC.plugins.tools.clone import restart_bots
+
 
 async def init():
     if (
@@ -21,8 +23,10 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER(__name__).error("ᴀʙᴇ ʟᴏᴠᴅᴇ ʟᴏɢɢᴇʀ ɢʀᴏᴜᴘ ᴍᴇ ᴀᴅᴍɪɴ ᴛᴇʀᴀ ʙᴀᴘ ᴋʀᴇ ɢᴀ ᴋʏᴀ ")
-        
+        LOGGER(__name__).error(
+            "ᴀʙᴇ ʟᴏᴠᴅᴇ ʟᴏɢɢᴇʀ ɢʀᴏᴜᴘ ᴍᴇ ᴀᴅᴍɪɴ ᴛᴇʀᴀ ʙᴀᴘ ᴋʀᴇ ɢᴀ ᴋʏᴀ"
+        )
+
     await sudo()
     try:
         users = await get_gbanned()
@@ -37,23 +41,24 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("PBXMUSIC.plugins" + all_module)
-    LOGGER("PBXMUSIC.plugins").info(" ꜱᴏ ꜱᴀᴅ 🥳...")
+    LOGGER("PBXMUSIC.plugins").info("ꜱᴏ ꜱᴀᴅ 🥳...")
+
     await userbot.start()
+
     await PBX.start()
     await PBX.decorators()
-    LOGGER("PBXMUSIC").info("╔═════ஜ۩۞۩ஜ════╗\n  ♨️ᴍᴀᴅᴇ ʙʏ ᴛᴇᴀᴍ ᴘʙx ♨️\n╚═════ஜ۩۞۩ஜ════╝"
-    )
+    await restart_bots()
+    LOGGER("PBXMUSIC").info("╔═════ஜ۩۞۩ஜ════╗\n  ♨️ᴍᴀᴅᴇ ʙʏ ᴛᴇᴀᴍ ᴘʙx ♨️\n╚═════ஜ۩۞۩ஜ════╝")
     await idle()
-    if len(argv) not in (1, 3, 4):
-        await telethn.disconnect()
-    else:
-        await telethn.run_until_disconnected()
-                
+
     await app.stop()
     await userbot.stop()
-    LOGGER("PBXMUSIC").info("               ╔═════ஜ۩۞۩ஜ════╗\n  ♨️ᴍᴀᴅᴇ ʙʏ ᴛᴇᴀᴍ ᴘʙx ♨️\n╚═════ஜ۩۞۩ஜ════╝")
-    
+
+    LOGGER("PBXMUSIC").info(
+        "                 ╔═════ஜ۩۞۩ஜ════╗\n  ♨️ᴍᴀᴅᴇ ʙʏ ᴛᴇᴀᴍ ᴘʙx ♨️\n╚═════ஜ۩۞۩ஜ════╝"
+    )
+
 
 if __name__ == "__main__":
-    telethn.start(bot_token=config.BOT_TOKEN)
+
     asyncio.get_event_loop().run_until_complete(init())
