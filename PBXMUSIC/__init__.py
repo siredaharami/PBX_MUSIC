@@ -1,8 +1,10 @@
-from PBXMUSIC.core.bot import PBX
+from PBXMUSIC.core.bot import VIP
 from PBXMUSIC.core.dir import dirr
 from PBXMUSIC.core.git import git
 from PBXMUSIC.core.userbot import Userbot
 from PBXMUSIC.misc import dbb, heroku
+from telethon import TelegramClient
+from config import API_ID, API_HASH
 
 from SafoneAPI import SafoneAPI
 from .logging import LOGGER
@@ -12,7 +14,7 @@ git()
 dbb()
 heroku()
 
-app = PBX()
+app = VIP()
 api = SafoneAPI()
 userbot = Userbot()
 
@@ -26,4 +28,5 @@ Spotify = SpotifyAPI()
 Resso = RessoAPI()
 Telegram = TeleAPI()
 YouTube = YouTubeAPI()
-APP = "@MissBroken_Bot"  # connect music api key "Dont change it"
+
+telethn = TelegramClient("PBXMUSIC", API_ID, API_HASH)
