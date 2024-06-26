@@ -19,7 +19,7 @@ pydub
 pycountry
 heroku3
 apscheduler
-motor==3.3.2
+motor==3.5.0
 opencv-python-headless==4.9.0.80
 pillow==10.3.0
 psutil
